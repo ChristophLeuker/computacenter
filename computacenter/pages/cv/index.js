@@ -6,9 +6,9 @@ import Image from "next/image";
 
 
 export const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin-top: 800px; /* Abstand nach oben anpassen */
+  position: fixed;
+  bottom: 20px; /* Abstand zum unteren Rand */
+  right: 20px; /* Abstand zum rechten Rand */
   text-align: center;
 `;
 
@@ -27,6 +27,17 @@ export const StyledButton = styled(Link)`
 `;
 
 
+const MeinBild = () => (
+  <div>
+    <Image
+      src="/brauerei.jpg"
+      alt="Brauerei Bild"
+      width={100}
+      height={100}
+    />
+  </div>
+);
+
 export default function cv() {
   return (
     <>
@@ -34,6 +45,7 @@ export default function cv() {
      <HeaderWrapper>
       <HeaderText>This is me - Christoph Leuker</HeaderText>
       </HeaderWrapper>
+      <MeinBild/>
 <ButtonContainer>
   <StyledButton href={"/"}> Back </StyledButton>
 </ButtonContainer>
